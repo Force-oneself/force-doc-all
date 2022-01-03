@@ -127,7 +127,7 @@ public class WriteHandlerUtils {
 
     public static void afterCellDispose(WriteContext writeContext, CellData cellData, Cell cell, Head head,
         Integer relativeRowIndex, Boolean isHead) {
-        List<CellData> cellDataList = new ArrayList<CellData>();
+        List<CellData> cellDataList = new ArrayList<>();
         if (cell != null) {
             cellDataList.add(cellData);
         }

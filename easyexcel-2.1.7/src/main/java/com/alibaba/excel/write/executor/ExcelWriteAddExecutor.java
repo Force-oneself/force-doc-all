@@ -110,7 +110,7 @@ public class ExcelWriteAddExecutor extends AbstractExcelWriteExecutor {
         WriteHolder currentWriteHolder = writeContext.currentWriteHolder();
         // 将对象转换成BeanMao类型，CGLIB
         BeanMap beanMap = BeanMap.create(oneRowData);
-        Set<String> beanMapHandledSet = new HashSet<String>();
+        Set<String> beanMapHandledSet = new HashSet<>();
         int cellIndex = 0;
         // If it's a class it needs to be cast by type
         if (HeadKindEnum.CLASS.equals(writeContext.currentWriteHolder().excelWriteHeadProperty().getHeadKind())) {
@@ -172,7 +172,7 @@ public class ExcelWriteAddExecutor extends AbstractExcelWriteExecutor {
         }
     }
 
-    private void initFieldList(Class clazz, List<Field> fieldList) {
+    private void initFieldList(Class<?> clazz, List<Field> fieldList) {
         if (!fieldList.isEmpty()) {
             return;
         }
